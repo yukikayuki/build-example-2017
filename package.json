@@ -4,6 +4,9 @@
   "main": "index.js",
   "author": "Matsui Masashi <matsui@kaffeine.jp>",
   "license": "MIT",
+  "scripts": {
+    "start": "webpack"
+  },
   "devDependencies": {
     "webpack": "^3.1.0"
   }
