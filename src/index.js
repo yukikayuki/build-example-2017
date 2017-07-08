@@ -1,11 +1,11 @@
 import 'babel-polyfill'
 
-import hello from './hello'
+import React from 'react'
+import ReactDOM from 'react-dom'
 
-hello()
+import Hello from './hello'
 
-const func = () => console.log('func')
-
-const array = [1, 2, 3]
-const hasOne = array.includes(1)
-console.log(hasOne)
+ReactDOM.render(
+  <Hello />,
+  document.getElementById('root')
+);
