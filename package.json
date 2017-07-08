@@ -1,0 +1,7 @@
+{
+  "name": "example",
+  "version": "1.0.0",
+  "main": "index.js",
+  "author": "Matsui Masashi <matsui@kaffeine.jp>",
+  "license": "MIT"
+}
