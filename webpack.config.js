@@ -1,3 +1,5 @@
+const path = require('path')
+
 module.exports = {
   entry: './src/index.js',
   output: {
@@ -12,5 +14,10 @@ module.exports = {
         loader: "babel-loader"
       }
     ]
+  },
+  devServer: {
+    contentBase: path.join(__dirname, "src"),
+    compress: true,
+    port: 8000
   }
 }
