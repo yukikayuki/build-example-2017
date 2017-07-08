@@ -1,3 +1,4 @@
+const webpack = require('webpack')
 const path = require('path')
 
 module.exports = {
@@ -15,7 +16,11 @@ module.exports = {
       }
     ]
   },
+  plugins: [
+    new webpack.HotModuleReplacementPlugin()
+  ],
   devServer: {
+    hot: true,
     contentBase: path.join(__dirname, "src"),
     compress: true,
     port: 8000
