@@ -8,7 +8,9 @@
     "start": "webpack-dev-server",
     "lint": "eslint ./src/**/*.js",
     "typecheck": "flow",
-    "test": "mocha"
+    "test": "mocha",
+    "storybook": "start-storybook -p 6006",
+    "build-storybook": "build-storybook"
   },
   "devDependencies": {
     "babel-cli": "^6.24.1",
@@ -26,7 +28,8 @@
     "mocha": "^3.4.2",
     "power-assert": "^1.4.4",
     "webpack": "^3.1.0",
-    "webpack-dev-server": "^2.5.1"
+    "webpack-dev-server": "^2.5.1",
+    "@storybook/react": "^3.1.8"
   },
   "dependencies": {
     "babel-polyfill": "^6.23.0",
