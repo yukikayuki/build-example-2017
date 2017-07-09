@@ -13,6 +13,7 @@
     "build-storybook": "build-storybook"
   },
   "devDependencies": {
+    "@storybook/react": "^3.1.8",
     "babel-cli": "^6.24.1",
     "babel-core": "^6.25.0",
     "babel-eslint": "^7.2.3",
@@ -28,10 +29,10 @@
     "mocha": "^3.4.2",
     "power-assert": "^1.4.4",
     "webpack": "^3.1.0",
-    "webpack-dev-server": "^2.5.1",
-    "@storybook/react": "^3.1.8"
+    "webpack-dev-server": "^2.5.1"
   },
   "dependencies": {
+    "aphrodite": "^1.2.1",
     "babel-polyfill": "^6.23.0",
     "react": "^15.6.1",
     "react-dom": "^15.6.1"
