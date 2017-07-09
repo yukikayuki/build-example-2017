@@ -1,7 +1,18 @@
+// @flow
 import React from 'react'
 
 export default class Hello extends React.Component {
-  render() {
-    return <h1>Hello World !</h1>
+  props: {
+    name: string
   }
+
+  render() {
+    const {name} = this.props
+    const message = aisatsu(name)
+    return <h1>{message}</h1>
+  }
+}
+
+function aisatsu(name: string): string {
+  return `Hello, ${name} !`
 }
