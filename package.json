@@ -5,7 +5,8 @@
   "author": "Matsui Masashi <matsui@kaffeine.jp>",
   "license": "MIT",
   "scripts": {
-    "start": "webpack-dev-server"
+    "start": "webpack-dev-server",
+    "lint": "eslint ./src/**/*.js"
   },
   "devDependencies": {
     "babel-core": "^6.25.0",
