@@ -15,6 +15,9 @@
     "babel-preset-react": "^6.24.1",
     "eslint": "^4.2.0",
     "eslint-plugin-react": "^7.1.0",
+    "intelli-espower-loader": "^1.0.1",
+    "mocha": "^3.4.2",
+    "power-assert": "^1.4.4",
     "webpack": "^3.1.0",
     "webpack-dev-server": "^2.5.1"
   },
