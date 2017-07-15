@@ -6,6 +6,10 @@
   "license": "MIT",
   "scripts": {
     "start": "webpack-dev-server",
+    "clean": "rimraf dist",
+    "assets": "mkdir dist && cp src/index.html dist/index.html",
+    "prebuild": "npm run clean && npm run assets",
+    "build": "webpack --config webpack.config.js",
     "lint": "eslint ./src/**/*.js",
     "flow": "flow",
     "flow-typed": "flow-typed",
