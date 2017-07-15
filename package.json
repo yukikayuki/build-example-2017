@@ -10,6 +10,7 @@
     "flow": "flow",
     "flow-typed": "flow-typed",
     "test": "mocha",
+    "test:watch": "mocha -w",
     "storybook": "start-storybook -p 6006",
     "build-storybook": "build-storybook"
   },
