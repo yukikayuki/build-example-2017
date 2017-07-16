@@ -1,19 +1,31 @@
+// @flow
+import type {FluxStandardAction} from './types'
+
 export const INCREMENT = 'INCREMENT'
-export function increment() {
+export type IncrementActionType = {
+  type: 'INCREMENT'
+}
+export function increment(): FluxStandardAction {
   return {
     type: INCREMENT
   }
 }
 
 export const DECREMENT = 'DECREMENT'
-export function decrement() {
+export type DecrementActionType = {
+  type: 'DECREMENT'
+}
+export function decrement(): FluxStandardAction {
   return {
     type: DECREMENT
   }
 }
 
 export const RESET = 'RESET'
-export function reset() {
+export type ResetActionType = {
+  type: 'RESET'
+}
+export function reset(): FluxStandardAction {
   return {
     type: RESET
   }

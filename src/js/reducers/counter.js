@@ -1,15 +1,25 @@
+// @flow
 import {
   INCREMENT,
   DECREMENT,
   RESET
 } from '../actions/counter'
 
+import type {
+  IncrementActionType,
+  DecrementActionType,
+  ResetActionType
+} from '../actions/counter'
+type CounterActionTypes = IncrementActionType | DecrementActionType | ResetActionType
 
+export type StateType = {
+  count: number
+}
 const initialState = {
   count: 0
 }
 
-export default function counter(state = initialState, action) {
+export default function counter(state: StateType = initialState, action: CounterActionTypes): StateType {
   switch (action.type) {
     case INCREMENT:
       return Object.assign({}, state, {
