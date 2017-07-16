@@ -24,6 +24,7 @@ module.exports = {
   plugins: [
     new webpack.HotModuleReplacementPlugin()
   ],
+  devtool: "inline-source-map",
   devServer: {
     hot: true,
     contentBase: path.join(__dirname, "src"),
