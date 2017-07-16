@@ -28,6 +28,7 @@
     "babel-preset-flow": "^6.23.0",
     "babel-preset-react": "^6.24.1",
     "eslint": "^4.2.0",
+    "eslint-plugin-flow": "^2.29.1",
     "eslint-plugin-flowtype": "^2.34.1",
     "eslint-plugin-react": "^7.1.0",
     "flow-bin": "^0.49.1",
