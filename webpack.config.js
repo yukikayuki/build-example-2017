@@ -5,6 +5,7 @@ module.exports = {
   entry: {
     'app': [
       'babel-polyfill',
+      'react-hot-loader/patch',
       './src/js/index.js'
     ]
   },
@@ -17,11 +18,15 @@ module.exports = {
       {
         test: /\.js$/,
         exclude: /node_modules/,
-        loader: "babel-loader"
+        loader: [
+          "react-hot-loader/webpack",
+          "babel-loader"
+        ]
       }
     ]
   },
   plugins: [
+    new webpack.NamedModulesPlugin(),
     new webpack.HotModuleReplacementPlugin(),
     new webpack.DefinePlugin({
       'process.env.NODE_ENV': JSON.stringify(process.env.NODE_ENV || 'development')
