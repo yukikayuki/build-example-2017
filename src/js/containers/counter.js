@@ -5,6 +5,8 @@ import {connect} from 'react-redux'
 import Counter from '../components/counter'
 import * as CounterActions from '../actions/counter'
 
+import {NavLink} from 'react-router-dom'
+
 // types
 import type {FluxStandardAction} from '../actions/types'
 import type {StateType as CounterType} from '../reducers/counter'
@@ -23,12 +25,15 @@ class App extends React.Component {
     console.log(_counter)
 
     return (
-      <Counter
-        count={counter.count}
-        onClickIncrement={() => dispatch(CounterActions.increment())}
-        onClickDecrement={() => dispatch(CounterActions.decrement())}
-        onClickReset={() => dispatch(CounterActions.reset())}
-      />
+      <div>
+        <Counter
+          count={counter.count}
+          onClickIncrement={() => dispatch(CounterActions.increment())}
+          onClickDecrement={() => dispatch(CounterActions.decrement())}
+          onClickReset={() => dispatch(CounterActions.reset())}
+        />
+        <NavLink to='/second'>Second</NavLink>
+      </div>
     )
   }
 }

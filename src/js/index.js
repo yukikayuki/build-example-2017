@@ -1,10 +1,9 @@
 // @flow
 import React from 'react'
 import ReactDOM from 'react-dom'
-import {Provider} from 'react-redux'
 import {createStore} from 'redux'
 import reducers from './reducers'
-import Counter from './containers/counter'
+import Root from './root'
 import {AppContainer} from 'react-hot-loader'
 
 let store
@@ -19,15 +18,13 @@ const rootEl = document.getElementById('root')
 const render = Component => {
   ReactDOM.render(
     <AppContainer>
-      <Provider store={store}>
-        <Component />
-      </Provider>
+      <Component store={store} />
     </AppContainer>,
     rootEl
   )
 }
 
-render(Counter)
+render(Root)
 if (module.hot) {
   module.hot.accept('./containers/counter', () => render(Counter))
 }
