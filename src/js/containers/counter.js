@@ -19,6 +19,9 @@ class App extends React.Component {
   render() {
     const {counter, dispatch} = this.props
 
+    const _counter = {...counter}
+    console.log(_counter)
+
     return (
       <Counter
         count={counter.count}
