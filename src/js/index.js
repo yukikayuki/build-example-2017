@@ -6,6 +6,13 @@ import reducers from './reducers'
 import Root from './root'
 import {AppContainer} from 'react-hot-loader'
 
+// declare module variable
+declare var module: {
+  hot: {
+    accept: (path: string, func: () => void) => void
+  }
+}
+
 let store
 if (process.env.NODE_ENV === 'production') { // eslint-disable-line no-undef
   store = createStore(reducers)
@@ -26,5 +33,5 @@ const render = Component => {
 
 render(Root)
 if (module.hot) {
-  module.hot.accept('./containers/counter', () => render(Counter))
+  module.hot.accept('./containers/counter', () => render(Root))
 }

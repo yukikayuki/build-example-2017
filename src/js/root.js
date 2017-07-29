@@ -8,7 +8,8 @@ import {
   Route
 } from 'react-router-dom'
 
-const Root = ({store}) => (
+
+const Root = ({store}: {store: any}) => (
   <Provider store={store}>
     <Router>
       <div>
