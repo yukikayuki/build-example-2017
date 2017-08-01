@@ -10,7 +10,7 @@
     "assets": "mkdir dist && cp src/index.html dist/index.html",
     "prebuild": "npm run clean && npm run assets",
     "build": "webpack --config webpack.config.js",
-    "lint": "eslint ./src/**/*.js",
+    "lint": "eslint ./src",
     "flow": "flow",
     "flow-typed": "flow-typed",
     "test": "mocha",
