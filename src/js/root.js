@@ -5,7 +5,7 @@ import Counter from './containers/counter'
 import Second from './containers/second'
 import {
   BrowserRouter as Router,
-  Route
+  Route,
 } from 'react-router-dom'
 
 

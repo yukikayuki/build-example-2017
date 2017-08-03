@@ -35,6 +35,10 @@ module.exports = {
             "error",
             "never"
         ],
+        "comma-dangle": [
+            "error",
+            "always-multiline"
+        ],
         "react/jsx-uses-react": "error",
         "react/jsx-uses-vars": "error",
         "react/jsx-key": "error"

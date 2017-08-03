@@ -3,30 +3,30 @@ import type {FluxStandardAction} from './types'
 
 export const INCREMENT = 'INCREMENT'
 export type IncrementActionType = {
-  type: 'INCREMENT'
+  type: 'INCREMENT',
 }
 export function increment(): FluxStandardAction {
   return {
-    type: INCREMENT
+    type: INCREMENT,
   }
 }
 
 export const DECREMENT = 'DECREMENT'
 export type DecrementActionType = {
-  type: 'DECREMENT'
+  type: 'DECREMENT',
 }
 export function decrement(): FluxStandardAction {
   return {
-    type: DECREMENT
+    type: DECREMENT,
   }
 }
 
 export const RESET = 'RESET'
 export type ResetActionType = {
-  type: 'RESET'
+  type: 'RESET',
 }
 export function reset(): FluxStandardAction {
   return {
-    type: RESET
+    type: RESET,
   }
 }
