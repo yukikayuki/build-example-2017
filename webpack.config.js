@@ -1,18 +1,23 @@
 const webpack = require('webpack')
 const path = require('path')
+const {
+  addLibEntriesToTopOfEntries,
+  output
+} = require('./webpack.config.common')
+
+
+/*
+ * 純粋なentryにpolyfillとhot-loader用の必要なものを設定する
+ *
+ * before: {app: ['./src/js/index.js']}
+ * after: {app: ['babel-polyfill', 'react-hot-loader/patch', './src/js/index.js']}
+ */
+const devEntries = addLibEntriesToTopOfEntries(['babel-polyfill', 'react-hot-loader/patch'])
+
 
 module.exports = {
-  entry: {
-    'app': [
-      'babel-polyfill',
-      'react-hot-loader/patch',
-      './src/js/index.js'
-    ]
-  },
-  output: {
-    path: `${__dirname}/dist`,
-    filename: 'bundle.js'
-  },
+  entry: devEntries,
+  output: output,
   module: {
     rules: [
       {
